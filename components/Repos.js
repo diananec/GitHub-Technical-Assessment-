@@ -33,8 +33,7 @@ function Repos({
           >
             <a href={contents_url}>View Repo Content</a>
           </button>
-        </span>{" "}
-        {/*aici fac un buton care sa imi deschida continutul repoului de fapt*/}
+        </span>
       </div>
 
       <div className="flex justify-evenly items-center p-4">
@@ -50,10 +49,8 @@ function Repos({
           </span>
           <div>{language}</div>
         </span>
-        <span>
-          <span className="text-gray-400 text-sm  flex flex-col justify-center items-center">
-            ID
-          </span>
+        <span className="text-gray-400 text-sm  flex flex-col justify-center items-center">
+          <span>ID</span>
           <div>{id}</div>
         </span>
         <span className="flex flex-col items-center justify-center">

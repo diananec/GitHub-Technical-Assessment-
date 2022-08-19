@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Repos from "../components/Repos";
 
-function gitUser() {
+function GitUser() {
   const [items, setItems] = useState([]);
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("savedData"));
@@ -29,4 +29,4 @@ function gitUser() {
   );
 }
 
-export default gitUser;
+export default GitUser;

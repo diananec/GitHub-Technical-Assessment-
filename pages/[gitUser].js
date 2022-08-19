@@ -16,12 +16,13 @@ function GitUser() {
           key={elem.node_id}
           id={elem.id}
           name={elem.name}
-          fullName={elem.fullName}
+          fullName={elem.full_name}
           privacy={elem.private}
           commits={elem.commits}
           language={elem.language}
           contents_url={elem.clone_url}
-          forks={elem.forks}
+          forks={elem.forks_url}
+          noForks={elem.forks}
           pushed_at={elem.pushed_at}
         />
       ))}

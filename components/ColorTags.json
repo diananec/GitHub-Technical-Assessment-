@@ -1,0 +1,30 @@
+{
+  "JavaScript": {
+    "color": "#f1e05a",
+    "tag": "JS"
+  },
+  "CSS": { "color": "#563d7c", "tag": "CSS" },
+  "Java": { "color": "#b07219", "tag": "J" },
+  "Python": { "color": "#97C1A9", "tag": "Py" },
+  "HTML": { "color": "#FFB8B1", "tag": "HTML" },
+  "C": { "color": "#DFCCF1", "tag": "C" },
+  "C++": { "color": "#f34b7d", "tag": "C++" },
+  "OCaml": { "color": "#3be133", "tag": "OC" },
+  "Jupyter Notebook": { "color": "#DA5B0B", "tag": "JN" },
+  "Rust": { "color": "#dea584", "tag": "R" },
+  "Hack": { "color": "#878787", "tag": "HK" },
+  "Objective-C": { "color": "#438eff", "tag": "OjC" },
+  "Ruby": { "color": "#701516", "tag": "Rb" },
+  "Go": { "color": "#00ADD8", "tag": "Go" },
+  "PHP": { "color": "#4F5D95", "tag": "PHP" },
+  "Kotlin": { "color": "#A97BFF", "tag": "Kt" },
+  "Groovy": { "color": "#4298b8", "tag": "Gv" },
+  "Haskell": { "color": "#5e5086", "tag": "Hs" },
+  "Objective-C++": { "color": "#6866fb", "tag": "OCp" },
+  "TypeScript": { "color": "#55CBCD", "tag": "TS" },
+  "Markdown": { "color": "#083fa1", "tag": "Mk" },
+  "XML": { "color": "#0060ac", "tag": "XML" },
+  "JSON": { "color": "#292929", "tag": "JSON" },
+  "Gradle": { "color": "#02303a", "tag": "Gd" },
+  "Swift": { "color": "#F05138", "tag": "Sw" }
+}

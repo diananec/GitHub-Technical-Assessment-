@@ -1,7 +1,9 @@
 import { Avatar } from "@mui/material";
-import { deepOrange } from "@mui/material/colors";
-import { colors } from "../components/ColorTags";
+
+import ColorTags from "../components/ColorTags";
 import moment from "moment";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 function Repos({
   id,
@@ -12,11 +14,29 @@ function Repos({
   language,
   contents_url,
   forks,
+  noForks,
   pushed_at,
 }) {
-  const access = () => {};
-  const AvColor = colors[language].color;
-  const AvTag = colors[language].tag;
+  const [forkers, setForkers] = useState([]);
+
+  let AvColor = "#fff";
+  let AvTag = "";
+
+  if (ColorTags[language]) {
+    AvColor = ColorTags[language].color;
+    AvTag = ColorTags[language].tag;
+  }
+
+  const getForkers = async () => {
+    await axios.get(forks).then((res) => {
+      setForkers(res.data.slice(-3));
+    });
+  };
+
+  useEffect(() => {
+    getForkers();
+  }, []);
+
   return (
     <div className="bg-[url('../images/bg.png')] flex flex-col m-5 border-3 rounded-full justify-center w-10/12">
       <div className="flex flex-row items-center justify-evenly py-2 px-2 m-4">
@@ -27,10 +47,7 @@ function Repos({
           {privacy ? "Private" : "Public"}
         </span>
         <span>
-          <button
-            onClick={access}
-            className="border-solid border-2 rounded-xl border-pink-300 text-white p-1 bg-gray-700 hover:bg-gray-400"
-          >
+          <button className="border-solid border-2 rounded-xl border-pink-300 text-white p-1 bg-gray-700 hover:bg-gray-400">
             <a href={contents_url}>View Repo Content</a>
           </button>
         </span>
@@ -42,6 +59,8 @@ function Repos({
             <Avatar
               sx={{
                 bgcolor: `${AvColor}`,
+                width: "60px",
+                height: "60px",
               }}
             >
               {AvTag}
@@ -55,7 +74,16 @@ function Repos({
         </span>
         <span className="flex flex-col items-center justify-center">
           <span>Forks</span>
-          <div>{forks}</div>
+          <div>{noForks}</div>
+          <div className="flex flex-row justify-evenly">
+            {forkers.map((forker) => (
+              <Avatar
+                key={forker.id}
+                src={forker.owner.avatar_url}
+                sx={{ width: "30px", height: "30px" }}
+              />
+            ))}
+          </div>
         </span>
 
         <span className="flex flex-row items-center justify-center">

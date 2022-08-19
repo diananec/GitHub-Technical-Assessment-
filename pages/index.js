@@ -13,6 +13,11 @@ export default function Home() {
         localStorage.setItem("savedData", JSON.stringify(res.data));
         console.log("Data is:", res.data);
         router.push(userName);
+      })
+      .catch((err) => {
+        if (err.response.status === 404) {
+          alert("User not found");
+        }
       });
   };
 

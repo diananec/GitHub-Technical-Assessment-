@@ -4,11 +4,13 @@ To run the development server you need to:
 
 ```bash
 npm run dev
-
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 Functionalities:
--On the start page, the user has to enter an existent GitHub username and to press the "View Repositories" button
+
+-On the start page, the user has to enter an existent GitHub username and to press the "View Repositories" button;
+
 -If the username does not exist, the user is alerted. Else, the user is redirected to a page which contains all the 
  repositories of the specific username.
  This page contains the names of the repositories, the privacy of them (but since you are not connected, you only can 

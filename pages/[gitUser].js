@@ -13,6 +13,7 @@ function gitUser() {
     <div className="flex flex-col justify-center items-center">
       {items.map((elem) => (
         <Repos
+          key={elem.node_id}
           id={elem.id}
           name={elem.name}
           fullName={elem.fullName}
